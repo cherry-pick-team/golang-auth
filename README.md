@@ -2,4 +2,6 @@
 Auth service for our app
 
 ## Setup
-* Clone with project to your GOPATH
+* Clone this project to your GOPATH
+* Build for go v1.8
+* Package management with godep
