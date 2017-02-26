@@ -2,5 +2,11 @@
 	"ImportPath": "golang-auth",
 	"GoVersion": "go1.8",
 	"GodepVersion": "v79",
-	"Deps": []
+	"Deps": [
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.3.0-3-g999ef73",
+			"Rev": "999ef73f5d50979cf6d12afed1726325b63f9570"
+		}
+	]
 }
