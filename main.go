@@ -1,9 +1,9 @@
 package main
 
 import (
+	"golang-auth/src/Router"
 	"log"
 	"net/http"
-	"golang-auth/src/Router"
 )
 
 func main() {
