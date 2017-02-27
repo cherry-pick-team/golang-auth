@@ -19,7 +19,7 @@ type Secrets struct {
 func ReadSecrets(fileName string) (Secrets, error) {
 	s := Secrets{}
 	file, err := os.Open(fileName)
-	if (err != nil) {
+	if err != nil {
 		return s, err
 	}
 	decoder := json.NewDecoder(file)

@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  app:
+    image: golang:1.8
+    volumes:
+      - .:/go/src/golang-auth
+    ports:
+      - "8080:8080"
+    command: /bin/bash -c "go get -d && go run main.go"
+    working_dir: /go/src/golang-auth

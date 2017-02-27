@@ -5,6 +5,7 @@ import (
 
 	"github.com/gorilla/mux"
 	"golang-auth/src/Handlers"
+	"golang-auth/src/Utils"
 )
 
 type Route struct {
@@ -36,6 +37,7 @@ func NewRouter() *mux.Router {
 	for _, route := range routes {
 		var handler http.Handler
 		handler = route.HandlerFunc
+		handler = Utils.Logger(handler, route.Name)
 
 		router.
 			Methods(route.Method).
