@@ -19,22 +19,16 @@ type Routes []Route
 
 var routes = Routes{
 	Route{
-		"Index",
+		"VkAuthRedirect",
 		"GET",
-		"/",
-		Handlers.Index,
+		"/auth/vk",
+		Handlers.VkAuthRedirect,
 	},
 	Route{
 		"TodoIndex",
 		"GET",
-		"/todos",
-		Handlers.TodoIndex,
-	},
-	Route{
-		"TodoShow",
-		"GET",
-		"/todos/{todoId}",
-		Handlers.TodoShow,
+		"/auth/vk/callback",
+		Handlers.VkAuthCode,
 	},
 }
 
@@ -43,7 +37,6 @@ func NewRouter() *mux.Router {
 	for _, route := range routes {
 		var handler http.Handler
 		handler = route.HandlerFunc
-		handler = Utils.Logger(handler, route.Name)
 
 		router.
 			Methods(route.Method).
