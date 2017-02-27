@@ -5,7 +5,6 @@ import (
 
 	"github.com/gorilla/mux"
 	"golang-auth/src/Handlers"
-	"golang-auth/src/Utils"
 )
 
 type Route struct {
